@@ -59,7 +59,7 @@ SOC Dashboard Interface
 
 Watch the full EduShield MVP demo here:
 
-👉 **[Click to Watch Demo](PASTE_YOUR_GOOGLE_DRIVE_LINK_HERE)**  
+👉 **[Click to Watch Demo](https://drive.google.com/file/d/1JpwEl2ZOcd7amUF2-CpHCnPo7IMIxKVk/view?usp=sharing)**  
 *(Set Drive access to “Anyone with the link → Viewer”)*
 
 ---
