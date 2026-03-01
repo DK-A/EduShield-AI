@@ -1,4 +1,6 @@
-# EduShield
+# 🛡 EduShield
+
+![Overview](assets/overview_edushield.png)
 
 **AI-Powered Email Threat Intelligence & Security Posture Platform**
 
@@ -8,7 +10,14 @@ The platform is designed for scalable backend deployment and future edge executi
 
 ---
 
-## Overview
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
+![Status](https://img.shields.io/badge/Status-MVP-orange)
+
+---
+
+## 🚀 Overview
 
 EduShield bridges traditional spam filtering and modern security intelligence by combining:
 
@@ -22,41 +31,11 @@ EduShield bridges traditional spam filtering and modern security intelligence by
 
 ---
 
-## MVP Capabilities
+## 🏗 System Architecture
 
-### Email Safety Scoring
-- ML-generated score between 0–100  
-- 0 → Highly Dangerous  
-- 100 → Fully Safe  
+![Architecture](assets/architecture.jpeg)
 
-### Risk Categorization
-
-| Score Range | Risk Level |
-|------------|------------|
-| 0 – 49     | High       |
-| 50 – 74    | Medium     |
-| 75 – 100   | Low        |
-
-```python
-if score < 50:
-    risk = "High"
-elif score < 75:
-    risk = "Medium"
-else:
-    risk = "Low"
-```
-
-### Security Posture Score
-
-```
-Security Score = Average Safety Score (Latest 5 Emails)
-```
-
-Provides a real-time quantitative inbox health indicator.
-
----
-
-## System Architecture (MVP)
+### Processing Flow
 
 ```
 Gmail API
@@ -76,25 +55,67 @@ SOC Dashboard Interface
 
 ---
 
-## Edge Deployment Vision
+## 🎥 MVP Demo Video
 
-EduShield is being architected for edge execution using:
+Watch the full EduShield MVP demo here:
 
-**AMD Kria KV260 Vision AI Kit**
-
-Planned edge capabilities:
-
-- Lightweight inference engine
-- ARM-based model optimization
-- Reduced cloud dependency
-- Privacy-preserving local processing
-- Edge SOC-style monitoring interface
-
-This enables scalable deployment in enterprise and secure network environments.
+👉 **[Click to Watch Demo](PASTE_YOUR_GOOGLE_DRIVE_LINK_HERE)**  
+*(Set Drive access to “Anyone with the link → Viewer”)*
 
 ---
 
-## Tech Stack
+## 🧠 MVP Capabilities
+
+### 1️⃣ Email Safety Scoring
+
+- ML-generated score between **0–100**  
+- 0 → Highly Dangerous  
+- 100 → Fully Safe  
+
+```python
+if score < 50:
+    risk = "High"
+elif score < 75:
+    risk = "Medium"
+else:
+    risk = "Low"
+```
+
+---
+
+### 2️⃣ Risk Categorization
+
+| Score Range | Risk Level |
+|------------|------------|
+| 0 – 49     | High       |
+| 50 – 74    | Medium     |
+| 75 – 100   | Low        |
+
+---
+
+### 3️⃣ Security Posture Score
+
+```
+Security Score = Average Safety Score (Latest 5 Emails)
+```
+
+Provides a real-time quantitative inbox health indicator.
+
+---
+
+## 🔐 Privacy-First Design
+
+EduShield follows strict privacy principles:
+
+- No raw email body retention  
+- Metadata-only database storage  
+- No PII visualization in dashboard  
+- Dynamic risk calculation independent of stored labels  
+- Modular ML separation from UI layer  
+
+---
+
+## ⚙ Tech Stack
 
 ### Backend
 - FastAPI  
@@ -105,7 +126,7 @@ This enables scalable deployment in enterprise and secure network environments.
 ### Machine Learning
 - Scikit-learn  
 - TF-IDF Vectorizer  
-- Serialized Phishing Model (.pkl)  
+- Serialized Phishing Model  
 
 ### Frontend
 - HTML / CSS  
@@ -117,64 +138,40 @@ This enables scalable deployment in enterprise and secure network environments.
 
 ---
 
-## Current Project Structure
+## 📂 Project Structure
 
 ```
-backend/
-
-database/
-├── db.py
-├── models.py
-└── __init__.py
-
-model/
-├── phishing_model.pkl
-└── vectorizer.pkl
-
-routers/
-├── dashboard.py
-├── email.py
-├── gmail.py
-├── login.py
-├── oauth.py
-├── score.py
-├── security.py
-└── __init__.py
-
-services/
-├── anomaly_service.py
-├── auto_scan_service.py
-├── gmail_service.py
-├── login_service.py
-├── phishing_service.py
-├── scoring_service.py
-└── security_service.py
+EduShield-AI
+│
+├── backend/
+│   ├── database/
+│   ├── routers/
+│   ├── services/
+│   ├── main.py
+│   └── requirements.txt
+│
+├── assets/
+│   ├── overview_edushield.png
+│   └── architecture.jpeg
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## Privacy Design
+## 🖥 Local Setup
 
-EduShield follows strict privacy-first principles:
-
-- No raw email body retention  
-- Metadata-only database storage  
-- No PII visualization in dashboard  
-- Dynamic risk calculation independent of stored labels  
-- Modular ML separation from UI layer  
-
----
-
-## Local Setup
-
-### 1. Clone Repository
+### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/edushield.git
-cd edushield/backend
+git clone https://github.com/DK-A/EduShield-AI.git
+cd EduShield-AI/backend
 ```
 
-### 2. Create Virtual Environment
+---
+
+### 2️⃣ Create Virtual Environment
 
 ```bash
 python -m venv venv
@@ -192,13 +189,17 @@ Mac/Linux:
 source venv/bin/activate
 ```
 
-### 3. Install Dependencies
+---
+
+### 3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure PostgreSQL
+---
+
+### 4️⃣ Configure PostgreSQL
 
 ```sql
 CREATE DATABASE edushield;
@@ -218,27 +219,27 @@ python
 >>> Base.metadata.create_all(bind=engine)
 ```
 
-### 5. Run Server
+---
+
+### 5️⃣ Run Server
 
 ```bash
 uvicorn main:app --reload
 ```
 
-Server runs at:
-
+Server:
 ```
 http://127.0.0.1:8000
 ```
 
 Dashboard:
-
 ```
 http://127.0.0.1:8000/dashboard/your_email_here
 ```
 
 ---
 
-## Roadmap
+## 🛣 Roadmap
 
 - XGBoost phishing classifier integration  
 - SHAP explainability visualization  
@@ -252,7 +253,7 @@ http://127.0.0.1:8000/dashboard/your_email_here
 
 ---
 
-## Disclaimer
+## ⚠ Disclaimer
 
 EduShield is a cybersecurity innovation prototype intended for research and demonstration purposes.  
 Enterprise-grade deployment requires additional security, compliance, and scalability enhancements.
