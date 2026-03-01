@@ -1,6 +1,8 @@
 # 🛡 EduShield
 
-![Overview](assets/overview_edushield.png)
+<div align="center">
+  <img src="assets/overview_edushield.png" alt="EduShield Overview" width="850"/>
+</div>
 
 **AI-Powered Email Threat Intelligence & Security Posture Platform**
 
@@ -33,7 +35,11 @@ EduShield bridges traditional spam filtering and modern security intelligence by
 
 ## 🏗 System Architecture
 
-![Architecture](assets/architecture.jpeg)
+
+
+<div align="center">
+  <img src="assets/architecture.jpeg" alt="Architecture" width="850"/>
+</div>
 
 ### Processing Flow
 
@@ -133,7 +139,7 @@ EduShield follows strict privacy principles:
 - JavaScript  
 - Chart.js  
 
-### Edge (Planned)
+### Edge 
 - AMD Kria KV260 Vision AI Kit  
 
 ---
