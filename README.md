@@ -29,7 +29,7 @@ EduShield bridges traditional spam filtering and modern security intelligence by
 - Security posture computation  
 - Explainable AI reasoning  
 - Metadata-only privacy architecture  
-- Edge deployment readiness  
+- Proper Edge deployment readiness  
 
 ---
 
